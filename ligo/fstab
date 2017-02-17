@@ -1,0 +1,8 @@
+#
+# /etc/fstab
+# On systemd platforms do not attempt to use autofs as it will not work reliably!
+#
+config-osg.opensciencegrid.org /cvmfs/config-osg.opensciencegrid.org cvmfs noauto,x-systemd.automount 0 0
+oasis.opensciencegrid.org      /cvmfs/oasis.opensciencegrid.org      cvmfs noauto,x-systemd.automount 0 0
+ligo.osgstorage.org            /cvmfs/ligo.osgstorage.org            cvmfs noauto,x-systemd.automount 0 0
+cms.cern.ch                    /cvmfs/cms.cern.ch                    cvmfs noauto,x-systemd.automount 0 0
