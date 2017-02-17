@@ -4,7 +4,7 @@
 
 Repository for configuration files used to setup experiment-specific CVMFS area within OSG.
 Things to remember: 
-* keep this repository and existing `cvmfs-config-osg` RPM in sync, current stream at https://vdt.cs.wisc.edu/svn/native/redhat/trunk/cvmfs-config-osg/osg/
+* keep this repository and existing `cvmfs-config-osg` RPM in sync, current stream at https://vdt.cs.wisc.edu/svn/native/redhat/trunk/cvmfs-config-osg/
 
 ### For LIGO
 
