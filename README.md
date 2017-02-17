@@ -8,7 +8,7 @@ Things to remember:
 
 ### For LIGO
 
-Please, refer to `ligo` directory for config files. Useful documenation about site specific configuration:
+Please, refer to [`ligo` directory](ligo/) for config files. Useful documenation about site specific configuration:
 > https://wiki.ligo.org/LVCcomputing/SiteConfiguration
 
 ### For OSG
