@@ -1,0 +1,10 @@
+
+[Unit]
+Documentation=Mount point for the configuration CVMFS repository.
+
+[Mount]
+What=config-osg.opensciencegrid.org
+Where=/cvmfs/config-osg.opensciencegrid.org
+Type=cvmfs
+Options=noauto,x-systemd.automount
+

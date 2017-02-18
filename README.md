@@ -13,4 +13,8 @@ Please, refer to [`ligo directory`](ligo/) for config files. Useful documenation
 
 ### For OSG
 
-...coming soon...
+This repository is meant for packaging CVMFS configuration; it is not meant for end-users.
+
+End-user documentation can be found here:
+https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallCvmfs
+

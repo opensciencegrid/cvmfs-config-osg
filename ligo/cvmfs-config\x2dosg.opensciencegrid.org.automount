@@ -1,0 +1,8 @@
+
+[Unit]
+SourcePath=/etc/fstab
+Documentation=Automount point for the configuration CVMFS repository
+Before=local-fs.target
+
+[Automount]
+Where=/cvmfs/config-osg.opensciencegrid.org
