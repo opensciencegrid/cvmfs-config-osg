@@ -6,19 +6,17 @@ This is the source for the CernVM File System (CVMFS) configuration
 files for the Open Science Grid (OSG).  It includes packaging for
 Redhat and Debian.
 
-End-user documentation for Redhat systems can be found here:
-```
-https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallCvmfs
-```
+### Redhat
+
+End-user documentation for Redhat systems can be found
+[here](https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallCvmfs).
+
+### Debian
 
 For Debian, the End-user instructions are to install cvmfs from
-```
-https://cernvm.cern.ch/portal/filesystem/downloads
-```
+[the cvmfs download page](https://cernvm.cern.ch/portal/filesystem/downloads)
 and this package from
-```
-https://github.com/opensciencegrid/cvmfs-config-osg/releases
-```
+[github](https://github.com/opensciencegrid/cvmfs-config-osg/releases).
 Then if you want to enable autofs, add the following contents
 into /etc/auto.master.d/cvmfs.autofs:
 ```
