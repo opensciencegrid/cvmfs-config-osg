@@ -33,5 +33,5 @@ systemctl start cvmfs-config-osg
 ```
 That service will start a daemon to make sure that the configuration
 repository /cvmfs/config-osg.opensciencegrid.org stays mounted,
-which is necessary to work arond a Debian bug that causes autofs to
+which is necessary to work around a Debian bug that causes autofs to
 hang if a recursive automount is attempted.
