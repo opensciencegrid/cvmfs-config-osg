@@ -1,0 +1,11 @@
+[Unit]
+Description=daemon to keep /cvmfs/config-osg.opensciencegrid.org mounted
+After=autofs.service
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/cvmfs-config-osgd -p /run/cvmfs-config-osgd.pid /cvmfs/config-osg.opensciencegrid.org
+PIDFile=/run/cvmfs-config-osgd.pid
+
+[Install]
+WantedBy=multi-user.target
