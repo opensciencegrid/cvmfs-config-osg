@@ -39,7 +39,6 @@ mkdir ${workdir}/src/$PKG
 cp -R $srctree/* ${workdir}/src/$PKG
 mkdir ${workdir}/src/$PKG/debian
 cp -R ${workdir}/tmp/packaging/debian/* ${workdir}/src/$PKG/debian
-cp ${workdir}/tmp/packaging/debian/Makefile ${workdir}/src/$PKG
 echo "done"
 
 echo -n "figuring out version number from rpm packaging... "

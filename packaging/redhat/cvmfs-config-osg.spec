@@ -33,18 +33,7 @@ Default configuration parameters and public keys for CernVM-FS
 
 %install
 rm -rf $RPM_BUILD_ROOT
-for cvmfsdir in keys/opensciencegrid.org config.d default.d; do
-    mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/cvmfs/$cvmfsdir
-done
-for key in opensciencegrid.org.pub; do
-    install -D -m 444 "${key}" $RPM_BUILD_ROOT%{_sysconfdir}/cvmfs/keys/opensciencegrid.org
-done
-for defaultconf in 60-osg.conf; do
-    install -D -m 444 "${defaultconf}" $RPM_BUILD_ROOT%{_sysconfdir}/cvmfs/default.d
-done
-for conf in config-osg.opensciencegrid.org.conf; do
-    install -D -m 444 "${conf}" $RPM_BUILD_ROOT%{_sysconfdir}/cvmfs/config.d
-done
+make install-redhat DESTDIR=$RPM_BUILD_ROOT
 
 %files
 %dir %{_sysconfdir}/cvmfs/keys/opensciencegrid.org
@@ -53,7 +42,7 @@ done
 %config %{_sysconfdir}/cvmfs/config.d/*
 
 %changelog
-* Fri Feb 24 2017 Dave Dykstra <dwd@fnal.gov> - 2.0-2
+* Tue Feb 28 2017 Dave Dykstra <dwd@fnal.gov> - 2.0-2
 - Convert to store source on github.
 
 * Wed Feb 15 2017 Dave Dykstra <dwd@fnal.gov> - 2.0-1
