@@ -1,0 +1,12 @@
+Source: cvmfs-config-osg
+Maintainer: Dave Dykstra <dwd@fnal.gov>
+Section: config
+Priority: extra
+Standards-Version: 3.9.3.1
+Build-Depends: debhelper (>= 9) 
+Homepage: http://github.conf/opensciencegrid/cvmfs-config-osg
+
+Package: cvmfs-config-osg
+Architecture: all
+Depends: 
+Description: CernVM File System configuration for OSG
