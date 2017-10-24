@@ -43,11 +43,12 @@ echo "done"
 
 echo -n "figuring out version number from rpm packaging... "
 upstream_version="`sed -n 's/^Version: //p' ../redhat/$PKG.spec`"
-echo "done: $upstream_version"
+upstream_release="`sed -n 's/^Release: \([^%]*\).*/\1/p' ../redhat/$PKG.spec`"
+echo "done: $upstream_version.$upstream_release"
 
 echo "building..."
 cd ${workdir}/src/$PKG
-dch -v $upstream_version -M "bumped upstream version number"
+dch -v $upstream_version.$upstream_release -M "set upstream version number"
 
 cd debian
 pdebuild --buildresult ${workdir}/result -- --save-after-exec --debug
