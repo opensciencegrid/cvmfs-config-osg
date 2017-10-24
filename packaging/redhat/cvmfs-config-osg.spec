@@ -1,7 +1,7 @@
 Summary: CernVM File System OSG Configuration and Public Keys
 Name: cvmfs-config-osg
 Version: 2.0
-Release: 2%{?dist}
+Release: 3%{?dist}
 # download with:
 # $ curl -L -o cvmfs-config-osg-%{version}.tar.gz \
 #   https://github.com/opensciencegrid/cvmfs-config-osg/archive/v%{version}.tar.gz
@@ -42,7 +42,10 @@ make install-redhat DESTDIR=$RPM_BUILD_ROOT
 %config %{_sysconfdir}/cvmfs/config.d/*
 
 %changelog
-* Tue Feb 28 2017 Dave Dykstra <dwd@fnal.gov> - 2.0-2
+* Tue Feb 28 2017 Dave Dykstra <dwd@fnal.gov> - 2.0-3
+- Use common install Makefile between debian and redhat
+
+* Fri Feb 24 2017 Dave Dykstra <dwd@fnal.gov> - 2.0-2
 - Convert to store source on github.
 
 * Wed Feb 15 2017 Dave Dykstra <dwd@fnal.gov> - 2.0-1
