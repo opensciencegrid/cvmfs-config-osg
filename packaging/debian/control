@@ -8,5 +8,6 @@ Homepage: http://github.conf/opensciencegrid/cvmfs-config-osg
 
 Package: cvmfs-config-osg
 Architecture: all
-Depends: 
+Provides: cvmfs-config
+Conflicts: cvmfs-config
 Description: CernVM File System configuration for OSG
