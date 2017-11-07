@@ -13,7 +13,7 @@ if [ -z "$RPMREL" ]; then
     RPMREL="$(grep '^Release:' $SPECFILE | awk '{print $2}' | cut -d% -f1)"
 fi
 # if the version is current, increment the release number, else choose 1
-DEBREL="`sed -n "s/^Version: ${VERSION}\.${RPMREL}//p" $PKG.dsc 2>/dev/null`"
+DEBREL="`sed -n "s/^Version: ${VERSION}\.${RPMREL}-//p" $PKG.dsc 2>/dev/null`"
 if [ -z "$DEBREL" ]; then
     DEBREL=1
 else
