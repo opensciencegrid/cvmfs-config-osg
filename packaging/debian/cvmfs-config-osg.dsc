@@ -1,3 +1,8 @@
+# created by obsupdate.sh, do not edit by hand
+Debtransform-Tar: cvmfs-config-osg-2.0.tar.gz
+Format: 1.0
+Version: 2.0.3-1
+Binary: cvmfs-config-osg
 Source: cvmfs-config-osg
 Maintainer: Dave Dykstra <dwd@fnal.gov>
 Section: config
@@ -11,3 +16,6 @@ Architecture: all
 Provides: cvmfs-config
 Conflicts: cvmfs-config
 Description: CernVM File System configuration for OSG
+Files:
+  ffffffffffffffffffffffffffffffff 99999 file1
+  ffffffffffffffffffffffffffffffff 99999 file2
