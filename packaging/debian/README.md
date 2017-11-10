@@ -9,7 +9,7 @@ In order to build this on OBS, follow these steps:
     Use "home:cvmfs:contrib" as "Name of original project" and 
     "cvmfs-config-osg" as "Name of package in original project" and select
     "Create Branch".  It should then build, and you can reload the page
-    until it finishes.  You can also select the "_service" link, click
+    until it finishes.  You can also select the "\_service" link, click
     "show latest", and edit the source of the paths to be from
     different sources if you want to and click "Save".
 4.  To find the built packages, click on Repositories back in the
