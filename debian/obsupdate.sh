@@ -6,7 +6,7 @@
 HERE="`dirname $0`"
 ME="`basename $0`"
 PKG="`sed -n 's/^Source: //p' control`"
-SPECFILE="../redhat/$PKG.spec"
+SPECFILE="../rpm/$PKG.spec"
 VERSION="$(grep ^Version: $SPECFILE | awk '{print $2}')"
 RPMREL="$(grep '^%define release_prefix' $SPECFILE | awk '{print $3}')"
 if [ -z "$RPMREL" ]; then
