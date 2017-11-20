@@ -6,18 +6,11 @@
 HERE="`dirname $0`"
 ME="`basename $0`"
 PKG="`sed -n 's/^Source: //p' control`"
-SPECFILE="../redhat/$PKG.spec"
+SPECFILE="../rpm/$PKG.spec"
 VERSION="$(grep ^Version: $SPECFILE | awk '{print $2}')"
 RPMREL="$(grep '^%define release_prefix' $SPECFILE | awk '{print $3}')"
 if [ -z "$RPMREL" ]; then
     RPMREL="$(grep '^Release:' $SPECFILE | awk '{print $2}' | cut -d% -f1)"
-fi
-# if the version is current, increment the release number, else choose 1
-DEBREL="`sed -n "s/^Version: ${VERSION}\.${RPMREL}-//p" $PKG.dsc 2>/dev/null`"
-if [ -z "$DEBREL" ]; then
-    DEBREL=1
-else
-    let DEBREL+=1
 fi
 (
 echo "# created by $ME, do not edit by hand"
@@ -25,7 +18,7 @@ echo "# created by $ME, do not edit by hand"
 echo "Debtransform-Tar: ${PKG}-${VERSION}.tar.gz"
 #echo "Debtransform-Files-Tar: "
 echo "Format: 1.0"
-echo "Version: ${VERSION}.${RPMREL}-${DEBREL}"
+echo "Version: ${VERSION}.${RPMREL}"
 echo "Binary: $PKG"
 cat control
 echo "Files:"
