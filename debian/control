@@ -1,7 +1,7 @@
 Source: cvmfs-config-osg
 Maintainer: Dave Dykstra <dwd@fnal.gov>
 Section: utils
-Priority: extra
+Priority: optional
 Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 9)
 Homepage: http://github.com/opensciencegrid/cvmfs-config-osg
