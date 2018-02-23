@@ -1,6 +1,6 @@
 Summary: CernVM File System OSG Configuration and Public Keys
 Name: cvmfs-config-osg
-Version: 2.2
+Version: 2.3
 Release: 1%{?dist}
 # download with:
 # $ curl -L -o cvmfs-config-osg-%{version}.tar.gz \
@@ -39,6 +39,13 @@ make install-redhat DESTDIR=$RPM_BUILD_ROOT
 %config %{_sysconfdir}/cvmfs/config.d/*
 
 %changelog
+* Fri Feb 23 2018 Dave Dykstra <dwd@fnal.gov> - 2.3-1
+- Change the changelog date on version 2.0.3 from Feb 28 2017 to
+  May 28 2017 because osg-build complained about non-descending order
+  of the dates.
+- Change the rpm/rpmbuild-cvmfs-config-osg development test script 
+  to read from rpm instead of packaging/redhat.
+
 * Thu Feb 22 2018 Dave Dykstra <dwd@fnal.gov> - 2.2-1
 - Just change the version number because the OSG github-source for
   reading spec files doesn't work with dash release tags.
@@ -52,7 +59,7 @@ make install-redhat DESTDIR=$RPM_BUILD_ROOT
 - Move packaging/debian to debian and packaging/redhat to rpm, to work
   better with OBS and new OSG github packaging standard
 
-* Tue Feb 28 2017 Dave Dykstra <dwd@fnal.gov> - 2.0-3
+* Tue May 28 2017 Dave Dykstra <dwd@fnal.gov> - 2.0-3
 - Use common install Makefile between debian and redhat
 
 * Fri May 19 2017 Brian Lin <blin@cs.wisc.edu> - 2.0-2
