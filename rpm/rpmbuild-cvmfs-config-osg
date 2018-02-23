@@ -22,7 +22,7 @@ set -ex
 PKG="`echo $0|sed 's/.*build-//'`"
 SRCDIR=$HOME/work/$PKG
 cd $SRCDIR
-SPEC=packaging/redhat/$PKG.spec
+SPEC=rpm/$PKG.spec
 VERSION="`sed -n 's/^Version: //p' $SPEC`"
 cd $RPMBUILD/SOURCES
 ln -fns $SRCDIR $PKG-$VERSION
