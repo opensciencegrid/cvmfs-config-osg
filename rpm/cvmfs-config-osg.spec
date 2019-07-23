@@ -1,6 +1,6 @@
 Summary: CernVM File System OSG Configuration and Public Keys
 Name: cvmfs-config-osg
-Version: 2.3
+Version: 2.4
 Release: 1%{?dist}
 # download with:
 # $ curl -L -o cvmfs-config-osg-%{version}.tar.gz \
@@ -39,6 +39,10 @@ make install-redhat DESTDIR=$RPM_BUILD_ROOT
 %config %{_sysconfdir}/cvmfs/config.d/*
 
 %changelog
+* Tue Jul 23 2019 Dave Dykstra <dwd@fnal.gov> - 2.4-1
+- Change the server urls for the config-osg repository to use openhtc.io
+  aliases when the proxy url can use DIRECT.
+
 * Fri Feb 23 2018 Dave Dykstra <dwd@fnal.gov> - 2.3-1
 - Change the changelog date on version 2.0.3 from Feb 28 2017 to
   May 28 2017 because osg-build complained about non-descending order
