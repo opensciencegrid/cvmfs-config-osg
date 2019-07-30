@@ -1,6 +1,6 @@
 Summary: CernVM File System OSG Configuration and Public Keys
 Name: cvmfs-config-osg
-Version: 2.4
+Version: 2.5
 Release: 1%{?dist}
 # download with:
 # $ curl -L -o cvmfs-config-osg-%{version}.tar.gz \
@@ -22,6 +22,8 @@ Provides: oasis-config = 9
 
 Conflicts: cvmfs-config-default
 
+Requires: cvmfs >= 2.6.0
+
 %prep
 %setup
 
@@ -39,6 +41,9 @@ make install-redhat DESTDIR=$RPM_BUILD_ROOT
 %config %{_sysconfdir}/cvmfs/config.d/*
 
 %changelog
+* Tue Jul 30 2109 Edgar Fajardo <emfajard@ucsd.edu> - 2.5-1
+- Adding the cvmfs version requirements (SOFTWARE-3384)
+
 * Tue Jul 23 2019 Dave Dykstra <dwd@fnal.gov> - 2.4-1
 - Change the server urls for the config-osg repository to use openhtc.io
   aliases when the proxy url can use DIRECT.
