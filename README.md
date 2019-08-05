@@ -9,7 +9,7 @@ Redhat and Debian.
 ### Redhat
 
 End-user documentation for Redhat systems can be found
-[here](https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallCvmfs).
+[here](https://opensciencegrid.org/docs/worker-node/install-cvmfs/).
 
 ### Debian
 
