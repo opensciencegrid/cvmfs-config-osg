@@ -13,10 +13,9 @@ End-user documentation for Redhat systems can be found
 
 ### Debian
 
-For Debian, the End-user instructions are to install cvmfs from
-[the cvmfs download page](https://cernvm.cern.ch/portal/filesystem/downloads)
-and this package from
-[github](https://github.com/opensciencegrid/cvmfs-config-osg/releases).
+For Debian, the End-user instructions are to install this package from
+[cvmfs-contrib](https://cvmfs-contrib.github.io) and cvmfs from
+[the cvmfs download page](https://cernvm.cern.ch/portal/filesystem/downloads).
 Then if you want to enable autofs, add the following contents
 into /etc/auto.master.d/cvmfs.autofs:
 ```
@@ -26,12 +25,3 @@ and restart autofs with
 ```
 systemctl restart autofs
 ```
-and also enable and start the cvmfs-config-osg service with:
-```
-systemctl enable cvmfs-config-osg
-systemctl start cvmfs-config-osg
-```
-That service will start a daemon to make sure that the configuration
-repository /cvmfs/config-osg.opensciencegrid.org stays mounted,
-which is necessary to work around a Debian bug that causes autofs to
-hang if a recursive automount is attempted.
