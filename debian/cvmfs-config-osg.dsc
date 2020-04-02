@@ -1,7 +1,7 @@
 # created by obsupdate.sh, do not edit by hand
 Debtransform-Tar: cvmfs-config-osg-2.4.tar.gz
 Format: 1.0
-Version: 2.4.1
+Version: 2.4.4
 Binary: cvmfs-config-osg
 Source: cvmfs-config-osg
 Maintainer: Dave Dykstra <dwd@fnal.gov>
