@@ -42,8 +42,9 @@ make install-redhat DESTDIR=$RPM_BUILD_ROOT
 %changelog
 * Mon Oct 12 2020 Dave Dykstra <dwd@fnal.gov> - 2.5-1
 - Update the configuration for the config repo to apply all the logic
-  from the config repo's common.conf.  That is, support USE_CVMFS_CDN
-  and CVMFS_CLIENT_PROFILE.
+  from the config repo's default.conf and common.conf.  That is, support
+  USE_CVMFS_CDN and CVMFS_CLIENT_PROFILE and set default CVMFS_PAC_URLS
+  covering the WLCG Web Proxy Auto Discovery.
 - Reverse the order of the fallback proxies because of the bug in 
   https://sft.its.cern.ch/jira/browse/CVM-1920
 
