@@ -1,6 +1,6 @@
 Summary: CernVM File System OSG Configuration and Public Keys
 Name: cvmfs-config-osg
-Version: 2.5
+Version: 2.6
 Release: 1%{?dist}
 # download with:
 # $ curl -L -o cvmfs-config-osg-%{version}.tar.gz \
@@ -40,6 +40,9 @@ make install-redhat DESTDIR=$RPM_BUILD_ROOT
 %config %{_sysconfdir}/cvmfs/config.d/*
 
 %changelog
+* Mon May 29 2021 Dave Dykstra <dwd@fnal.gov> - 2.6-1
+- Change debian/format to 1.0 (non-native) to fix OBS Debian_10 build.
+
 * Mon Oct 12 2020 Dave Dykstra <dwd@fnal.gov> - 2.5-1
 - Update the configuration for the config repo to apply all the logic
   from the config repo's default.conf and common.conf.  That is, support
