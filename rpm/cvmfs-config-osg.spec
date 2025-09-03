@@ -1,7 +1,9 @@
 Summary: CernVM File System OSG Configuration and Public Keys
 Name: cvmfs-config-osg
 Version: 2.6
-Release: 1%{?dist}
+# The release_prefix macro is used in the OBS prjconf, don't change its name
+%define release_prefix 2
+Release: %{release_prefix}%{?dist}
 # download with:
 # $ curl -L -o cvmfs-config-osg-%{version}.tar.gz \
 #   https://github.com/opensciencegrid/cvmfs-config-osg/archive/v%{version}.tar.gz
@@ -40,6 +42,10 @@ make install-redhat DESTDIR=$RPM_BUILD_ROOT
 %config %{_sysconfdir}/cvmfs/config.d/*
 
 %changelog
+* Wed Sep  3 2025 Dave Dykstra <dwd@fnal.gov> - 2.6-2
+- Add support for building the rpm on OBS for Fedora by using the
+  release_prefix macro.
+
 * Mon May 29 2021 Dave Dykstra <dwd@fnal.gov> - 2.6-1
 - Change debian/format to 1.0 (non-native) to fix OBS Debian_10 build.
 
